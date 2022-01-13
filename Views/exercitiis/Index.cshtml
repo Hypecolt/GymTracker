@@ -1,0 +1,62 @@
+﻿@model IEnumerable<ProiectDAWcod.Data.exercitii>
+
+@{
+    ViewBag.Title = "Exercises";
+}
+
+<h2>Exercitii</h2>
+
+@*<p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.nume_exercitiu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.descriere)
+            </th>
+            <th></th>
+        </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.nume_exercitiu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.descriere)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.id_exercitiu }) |
+                @Html.ActionLink("Details", "Details", new { id=item.id_exercitiu }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.id_exercitiu })
+            </td>
+        </tr>
+    }
+
+    </table>*@
+
+@*<div class="yeet">
+    @foreach (var item in Model)
+    {   
+        <div class="card-wannabe">
+            <div>@Html.DisplayFor(modelItem => item.nume_exercitiu)</div>
+            <div>@Html.DisplayFor(modelItem => item.descriere)</div>
+        </div>
+    }
+</div>*@
+
+<div class="content">
+    @foreach (var item in Model)
+    {
+        <button class="red" onclick="location.href='@Url.Action("Details", new { id = item.id_exercitiu })';return false;">
+            <div>
+                @Html.DisplayFor(modelItem => item.nume_exercitiu)
+                @*<br>
+                <span class="descriere">@Html.DisplayFor(modelItem => item.descriere)</span>*@
+            </div>
+        </button>
+    }
+</div>

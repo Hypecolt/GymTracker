@@ -1,0 +1,68 @@
+﻿@model ProiectDAWcod.Data.utilizatori
+
+@{
+    ViewBag.Title = "Details";
+}
+
+    <h2>
+        @ViewBag.numeom
+    </h2>
+
+@*<div>
+        <h4>utilizatori</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.user_name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.user_name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.password)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.password)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.contact.nr_telefon)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.contact.nr_telefon)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.goal.tip_corp)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.goal.tip_corp)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.id_utilizator }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>*@
+
+<div class="content">
+    @foreach (var uzr in ViewBag.contactuzr)
+    {
+        <div class="red">
+            <div>
+                @uzr.Item1
+                <br>
+                @uzr.Item2
+                <br>
+                @uzr.Item3
+            </div>
+        </div>
+
+    }
+</div>

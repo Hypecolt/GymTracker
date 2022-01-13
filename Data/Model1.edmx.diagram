@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b853d3e8430549b39ea6ec7f74fb67bb" Name="Diagram1">
+        <EntityTypeShape EntityType="ProiectDAWModel.contact" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProiectDAWModel.exercitii" Width="1.5" PointX="6.375" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProiectDAWModel.goal" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProiectDAWModel.sysdiagram" Width="1.5" PointX="10.25" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProiectDAWModel.utilizatori" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProiectDAWModel.utilizatori_exercitii" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
+        <AssociationConnector Association="ProiectDAWModel.FK_utilizatori_contact" ManuallyRouted="false" />
+        <AssociationConnector Association="ProiectDAWModel.FK_utilizatori_exercitii_exercitii" ManuallyRouted="false" />
+        <AssociationConnector Association="ProiectDAWModel.FK_utilizatori_goals" ManuallyRouted="false" />
+        <AssociationConnector Association="ProiectDAWModel.FK_utilizatori_exercitii_utilizatori" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,62 @@
+﻿@model IEnumerable<ProiectDAWcod.Data.utilizatori>
+
+@{
+    ViewBag.Title = "Users";
+}
+
+<h2>Utilizatori</h2>
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.user_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.contact.nr_telefon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.goal.tip_corp)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.user_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.password)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.contact.nr_telefon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.goal.tip_corp)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id_utilizator }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id_utilizator }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id_utilizator })
+        </td>
+    </tr>
+}
+
+</table>*@
+
+<div class="content">
+    @foreach (var item in Model)
+    {
+        <button class="red" onclick="location.href='@Url.Action("Details", new { id = item.id_utilizator })';return false;">
+            <div>
+                @Html.DisplayFor(modelItem => item.user_name)
+            </div>
+        </button>
+    }
+</div>

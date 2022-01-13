@@ -1,0 +1,34 @@
+﻿@model ProiectDAWcod.Data.goal
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>goal</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.tip_corp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tip_corp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.descriere)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descriere)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_goal }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

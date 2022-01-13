@@ -1,0 +1,54 @@
+﻿@model ProiectDAWcod.Data.exercitii
+
+@{
+    ViewBag.Title = "Details";
+}
+
+
+@foreach (var nm in ViewBag.nume_egz)
+{
+    <h2>
+        @nm
+    </h2>
+    break;
+}
+   
+
+    @*<div>
+            <h4>exercitii</h4>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.nume_exercitiu)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.nume_exercitiu)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.descriere)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.descriere)
+                </dd>
+
+            </dl>
+        </div>
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.id_exercitiu }) |
+            @Html.ActionLink("Back to List", "Index")
+        </p>*@
+
+<div class="content">
+    @foreach (var uzr in ViewBag.uzeri)
+    {
+        <div class="red">
+            <div>
+                @uzr
+            </div>
+        </div>
+
+    }
+</div>
